@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICS Web & Graphic Design</title>
+    <meta name="description"
+        content="Hello, I'm Cosmin, a passionate Web and Graphic Designer. Step into my creative world and explore a diverse portfolio featuring logos, websites, and more. Discover my journey, skills, and artistic vision. Let's collaborate on your next design project. Get in touch today!">
+    <link rel="icon" href="/img/LOGOICS.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+
+    <script src="js/portfolio.js"></script>
+    <style>
+        #continut {
+            background-image: url('img/Cosmin.png');
+            background-repeat: no-repeat;
+            background-size: 450px;
+            background-position: center;
+            background-position-x: 25%;
+            background-position-y: 5%;
+        }
+
+        @media screen and (max-width: 950px) {
+            #continut {
+                background-color: #1d2026;
+                background-image: none;
+            }
+        }
+
+        @media screen and (min-width: 950px) {
+            #continut {
+                background-image: url('img/Cosmin.png');
+                background-repeat: no-repeat;
+                background-size: 450px;
+                background-position: center;
+                background-position-x: 25%;
+                background-position-y: 5%;
+
+
+
+            }
+        }
+    </style>
+</head>
+
+<body id="continut">
+
+    <div id="navbar">
+        <img src="img/logo.png">
+        <div class="burger" onclick="MobileNavbar()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="navbar-right">
+
+            <a href="#continut">Home</a>
+            <a href="#aboutme">About me</a>
+            <a href="cv.html">My resume</a>
+            <a href="#portfolio">Portofolio</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+
+    <div id="hero">
+        <div class="text-container-media">
+            <div class="image_media"></div>
+            <h1>Hi! I am Cosmin</h1>
+            <h1>Web and Graphic Designer</h1>
+        </div>
+        <div class="text-container" id="home">
+            <div>
+                <div class="square1">
+                    <p>Hi! I am</p>
+                </div>
+                <br />
+                <div class="square3">
+                    <p style="font-size: 40px; font-weight: 300;">Web Designer</p>
+                </div>
+            </div>
+            <div class="square2">
+                <p style="margin-left: 10%; margin-top: 4%;">Cosmin</p>
+                <h2 style="margin-left: 20%;">Graphic Designer</h2>
+            </div>
+        </div>
+
+        <div class="contact_icons">
+            <img src="img/gmail_icon.png" style="margin-top: 15%;">
+            <p>icswebdesign77@gmail.com</p>
+
+            <img src="img/phone_icon.png" style="margin-top: 15%;">
+            <p>+40 765 172 960</p>
+        </div>
+
+
+        <div class="about" id="aboutme">
+            <h1>About me</h1>
+            <div></div>
+            <br>
+            <p><b>Hi!</b> My name is <b>Cosmin</b> and I graduated Marketing at <i>Bucharest Academy of Economic
+                    Studies.</i>
+                Now, I have succesfully completed the Web Design courses at <i>Link Academy</i> IT school from
+                Bucharest. <br><br>I can create a responsive website using <b>HTML, CSS and JavaScript.</b> I know how to make a
+                website prototype in <b>Adobe XD</b> and I can turn any idea into a creative visual.<br>
+
+                I am familiar with the Adobe CC suit, and I have experience working with <b>Illustrator</b> and <b>Photoshop</b> on
+                Graphic Design projects.<br><br>
+                
+                I am a creative, sociable and responsible person with a great desire for self-development.
+                Attention to detail, limitless imagination and computer knowledge will help me deal with different tasks
+                that I will face.
+            </p>
+            <div></div>
+
+
+            <h2>My skills</h2>
+        </div>
+
+        <div id="skills" class="skills">
+            <div class="column" id="hard_skills">
+                <h1>Hard skills</h1>
+                <ul>
+                    <li>Graphic design</li>
+                    <li>Photoshop</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+
+            <div class="column" id="soft_skills">
+                <h1>Soft skills</h1>
+                <ul>
+                    <li>Creativity</li>
+                    <li>Attention to details</li>
+                    <li>Responsibility</li>
+                    <li>Teamwork</li>
+                    <li>Communication</li>
+                </ul>
+            </div>
+
+            <div class="column" id="used_apps">
+                <h1>Used apps</h1>
+                <ul>
+                    <li>Adobe Illustrator</li>
+                    <li>Adobe XD</li>
+                    <li>Adobe Photoshop</li>
+                    <li>Visual Studio Code</li>
+                    <li>Microsoft Office</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="portfolio" id="portfolio">
+            <h2>Portfolio</h2>
+            <section></section>
+
+            <div id="myBtnContainer">
+                <button class="btn active" onclick="activeButton(); filterSelection('logos');"> Logos</button>
+                <button class="btn" onclick="activeButton();filterSelection('websites');"> Websites</button>
+                <button class="btn" onclick="activeButton();filterSelection('other');"> Other</button>
+            </div>
+
+            <!-- Portfolio Gallery Grid -->
+            <div class="gallery">
+                <div id="modal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img_modal">
+                </div>
+                <!-- logos -->
+                <div class="column_logos" id="column_logos">
+                    <div class="content">
+                        <img id="img" onclick="zoom(this)" src="gallery/Logo ICS.png" alt="ICS Logo">
+
+                        <div class="overlay">Logo Izot Cosmin Web and Graphic Design</div>
+                    </div>
+
+                    <div class="content">
+                        <img id="img" onclick="zoom(this)" src="gallery/mushmula.png" alt="Mushmula Logo">
+
+                        <div class="overlay">Logo Mushmula Photography</div>
+                    </div>
+
+                    <div class="content">
+                        <img id="img" onclick="zoom(this)" src="gallery/BGPdetailing.png" alt="BGPdetailing Logo">
+
+                        <div class="overlay">Logo BG Polish Detailing</div>
+                    </div>
+
+                    <div class="content">
+                        <img id="img" onclick="zoom(this)" src="gallery/VBmetalo_galant.png" alt="VBmetalo_galant Logo">
+
+                        <div class="overlay">Logo VB Metalo Galant</div>
+                    </div>
+
+                    <div class="content">
+                        <img id="img" onclick="zoom(this)" src="gallery/VRH_Band.png" alt="VRH Band Logo">
+
+                        <div class="overlay">Logo VRH Band</div>
+                    </div>
+
+                    <div class="content">
+                        <img id="img" onclick="zoom(this)" src="gallery/HAfarm.png" alt="Happy Arual Farm Logo">
+
+                        <div class="overlay">Logo Happy Arual Farm</div>
+                    </div>
+
+                    <div class="content">
+                        <img id="img" onclick="zoom(this)" src="gallery/LinkApprentice.png" alt="LinkApprentice Logo">
+
+                        <div class="overlay">Logo LinkApprentice Program</div>
+                    </div>
+
+                    <div class="content">
+                        <img id="img" onclick="zoom(this)" src="gallery/Izot Constructions.png"
+                            alt="Izot Constructions">
+
+                        <div class="overlay">Logo Izot Constructions</div>
+                    </div>
+
+                    <div class="content">
+                        <img id="img" onclick="zoom(this)" src="gallery/Qmedia.png" alt="Qmedia Logo">
+
+                        <div class="overlay">Logo Qmedia</div>
+                    </div>
+
+                    <div class="content">
+                        <img id="img" onclick="zoom(this)" src="gallery/IMO.png" alt="IMO Logo">
+
+                        <div class="overlay">Logo Institut Za Moderno Obrazovanje</div>
+                    </div>
+
+                    <div class="content">
+                        <img id="img" onclick="zoom(this)" src="gallery/Verica Lepir.png" alt="Verica Lepir Logo">
+
+                        <div class="overlay">Logo Verica Lepir Beauty Studio</div>
+                    </div>
+                    <div class="content">
+                        <img id="img" onclick="zoom(this)" src="gallery/Dainty!.png" alt="Dainty! Logo">
+
+                        <div class="overlay">Logo Dainty! Homemade Icecream</div>
+                    </div>
+
+
+
+                </div>
+                <!-- websites -->
+                <div class="column_websites" id="column_websites">
+                    <div class="content">
+                        <a href="https://bioforestvg.com/index.html"> <img src="gallery/Website.png"></a>
+                        <div class="overlay">Website BioForestVG</div>
+                    </div>
+                    <div class="content">
+                        <img id="img" onclick="zoom(this)" src="gallery/Website Maria FBO.jpg" alt="Website Forever">
+
+                        <div class="overlay">Website Maria FBO</div>
+                    </div>
+
+                </div>
+
+                <!-- other work -->
+                <div class="column_other" id="column_other">
+                    <div id="modal" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="img_modal">
+                    </div>
+                    <div class="content">
+                        <img id="img" onclick="zoom(this)" src="gallery/MajM.png" alt="Party flyer">
+
+                        <div class="overlay">Party flyer</div>
+                    </div>
+
+                    <div class="content">
+                        <img id="img" onclick="zoom(this)" src="gallery/Fane.png" alt="Photoshop edit">
+
+                        <div class="overlay">Photoshop edit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="contact" id="contact">
+            <h1>Contact me</h1>
+
+
+            <form id="formular">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your name..">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Your Email">
+
+                <label for="message">Subject</label>
+                <textarea id="message" name="message" required placeholder="Write something.."
+                    style="height: 200px;"></textarea>
+
+                <input type="submit" value="Send" onclick="sendEmail(event)">
+                <input type="reset" value="Reset">
+            </form>
+        </div>
+
+        <footer>
+            <br />
+            &copy; Izot Cosmin. All rights reserved.
+
+            <div class="social_icons">
+                <img src="img/facebook_icon.png">
+                <br />
+                <img src="img/linkedin_icon.png">
+                <br>
+                <img src="img/github.png">
+            </div>
+
+            <div class="social_media">
+                <ul>
+                    <li><a
+                            href="https://www.facebook.com/cosmin.izot/?paipv=0&eav=AfYyTRcfzDijHEY3bVFqxopdhI6m9uJVHEj5whTNrQc-VDAtqmInaTJpo7-Mbdr4rPk&_rdr">Facebook</a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/cosmin-izot-781560217/">LinkedIn</a></li>
+                    <li><a href="https://github.com/Cossmiin">GitHub</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
